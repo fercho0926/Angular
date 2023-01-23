@@ -1,0 +1,63 @@
+
+
+
+<h1>************* *ngIF*************</h1>
+<!-- <p *ngIf="show" >My content</p>
+
+<hr> -->
+
+<h1>************* NgModel*************</h1>
+<p>Name : {{person.name}}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
+<p>valid :{{nameInput.valid}}</p>
+<p>Age : {{person.age}}</p>
+<input type="number"  max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age"/>
+<p>valid age:{{ageInput.valid}}</p>
+<hr>
+
+
+<h1>************* Event Binding *************</h1>
+<button [disabled]= "btnDisabled">Send</button>
+<button (click)="toogleButton()"> Toggle Button</button>
+<p>Increace Age {{person.age}}</p>
+<button (click)="increaceAgeButton()">Increace Age</button>
+
+<div class="box"(scroll)="onscroll($event)">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi magni beatae, culpa voluptatum sunt officiis et praesentium inventore doloribus cumque velit? Ut voluptates minima dolore maiores, dolores harum incidunt.</p>
+</div>
+<p>Name : {{person.name}}</p>
+<input type="text" [value]="person.name"(keyup)="changeName($event)">
+<hr/>
+<h1>************* Properties Binding *************</h1>
+
+<h3>With Values</h3>
+<button [disabled]= "btnDisabled">Send</button>
+<input type="text" [value]="name">
+<progress max="100" [value]="age"></progress>
+<img width="100" [src]="img" >
+
+
+<h3>With Objects</h3>
+<input type="text" [value]="person.name">
+<progress max="100" [value]="person.age"></progress>
+<img width="100" [src]="person.avatar" >
+
+
+
+
+
+
+<h1> ************* String Interpolation *************</h1>
+<h2>{{'Hello World'.repeat(5)}}</h2>
+<p>3+3 = {{3+3}}</p>
+
+<h3>Hi my name is {{name}} y tengo {{age}}</h3>
+<img src={{img}} alt="imagen">
+
+<hr/>
+
+
+
+
+
+
